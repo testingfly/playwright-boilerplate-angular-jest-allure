@@ -11,7 +11,7 @@
     "format": "npx prettier \"src/**/*.{js,jsx,ts,tsx,html}\" --write",
     "prepare": "cd ../ && husky install ./web/.husky",
     "pre-commit": "npm run format && npx lint-staged",
-    "test:e2e": "cross-env ENV=$npm_config_env ALLURE_RESULTS_DIR=e2e/src/report/allure npx playwright test --config=e2e/playwright.config.ts --project=\"Profile-Chrome\" --headed",
+    "test:e2e": "cross-env ENV=$npm_config_env ALLURE_RESULTS_DIR=./e2e/src/report/allure npx playwright test --config=e2e/playwright.config.ts --project=\"Profile-Chrome\" --headed",
     "allure:report": "npx allure serve ./e2e/src/report/allure"
   },
   "lint-staged": {

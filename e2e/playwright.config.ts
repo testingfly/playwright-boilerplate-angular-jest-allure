@@ -32,7 +32,7 @@ const config: PlaywrightTestConfig = {
 
 
   // Reporters
-  reporter: [['junit', { outputFile: './e2e/src/report/test-results/junit.xml' }], ['list'], ['./src/config/reportconfig.ts'], ['allure-playwright'], ['html', { outputFolder: 'src/report/current', open: 'never'}]],
+  reporter: [['junit', { outputFile: './src/report/test-results/junit.xml' }], ['list'], ['./src/config/reportconfig.ts'], ['allure-playwright'], ['html', { outputFolder: 'src/report/current', open: 'never'}]],
 
   projects: [
     {
