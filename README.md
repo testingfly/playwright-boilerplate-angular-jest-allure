@@ -37,7 +37,7 @@ brew install angular-cli
 1. Clone this repository to your local machine:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/testingfly/playwright-boilerplate-angular-jest-allure.git
 ```
 
 2. Change your working directory to the project folder:
