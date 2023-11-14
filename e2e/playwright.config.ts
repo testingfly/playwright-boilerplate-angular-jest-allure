@@ -1,4 +1,4 @@
-import { PlaywrightTestConfig } from '@playwright/test';
+import { PlaywrightTestConfig, devices } from '@playwright/test';
 import { testConfig } from './src/config/testconfig';
 let ENV = process.env['ENV'];
 
@@ -23,7 +23,7 @@ const config: PlaywrightTestConfig = {
   globalTeardown: require.resolve('./src/utils/global-teardown'),
 
   // sets timeout for each test case
-  timeout: 1500,
+  timeout: 45000,
 
   // number of retries if test case fails
   retries: 0,
@@ -87,7 +87,18 @@ const config: PlaywrightTestConfig = {
           slowMo: 0
         }
       },
-    }
+    },
+    {
+      name: 'Mobile Safari',
+      use: {
+        ...devices['iPad Pro 11 landscape'],
+        baseURL: testConfig[ENV],
+        launchOptions: {
+          slowMo: 5500
+        }
+      },
+    },
   ],
 };
 export default config;
+
